@@ -10,150 +10,55 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div class="container">
-      <div class="container-content">
-        <div class="container-border">
-          <header>
-            <div class="header-content">
-              <span><i class="bi bi-reception-4"></i></span>
-              <span><i class="bi bi-wifi"></i></span>
-              <span><i class="bi bi-battery-full"></i></span>
-            </div>
-          </header>
-          <section class="calculate">
-            <p class="calcNums" id="display"></p>
 
-            <p class="result" id="result"></p>
-          </section>
-          <form>
-            <div>
-              <input
-                class="operator1"
-                type="button"
-                value="C"
-                onclick="clearDisplay()"
-              />
-              <input
-                class="operator1"
-                type="button"
-                value="+/-"
-                onclick="toggleSign()"
-              />
-              <input
-                class="operator1"
-                type="button"
-                onclick="appendToDisplay('%')"
-                value="%"
-              />
-              <input
-                class="operator2"
-                type="button"
-                value="÷"
-                onclick="appendToDisplay('/')"
-              />
-            </div>
-            <div>
-              <input
-                class="figure"
-                type="button"
-                value="7"
-                onclick="appendToDisplay('7')"
-              />
-              <input
-                class="figure"
-                type="button"
-                value="8"
-                onclick="appendToDisplay('8')"
-              />
-              <input
-                class="figure"
-                type="button"
-                value="9"
-                onclick="appendToDisplay('9')"
-              />
-              <input
-                class="operator2"
-                type="button"
-                value="x"
-                onclick="appendToDisplay('*')"
-              />
-            </div>
-            <div>
-              <input
-                class="figure"
-                type="button"
-                value="4"
-                onclick="appendToDisplay('4')"
-              />
-              <input
-                class="figure"
-                type="button"
-                value="5"
-                onclick="appendToDisplay('5')"
-              />
-              <input
-                class="figure"
-                type="button"
-                value="6"
-                onclick="appendToDisplay('6')"
-              />
-              <input
-                class="operator2"
-                type="button"
-                value="-"
-                onclick="appendToDisplay('-')"
-              />
-            </div>
-            <div>
-              <input
-                class="figure"
-                type="button"
-                value="1"
-                onclick="appendToDisplay('1')"
-              />
-              <input
-                class="figure"
-                type="button"
-                value="2"
-                onclick="appendToDisplay('2')"
-              />
-              <input
-                class="figure"
-                type="button"
-                value="3"
-                onclick="appendToDisplay('3')"
-              />
-              <input
-                class="operator2"
-                type="button"
-                value="+"
-                onclick="appendToDisplay('+')"
-              />
-            </div>
-            <div class="lastBtns">
-              <input
-                type="button"
-                value="0"
-                class="zeroBtn"
-                onclick="appendToDisplay('0')"
-              />
-              <input
-                class="figure"
-                type="button"
-                value="."
-                onclick="appendToDisplay('.')"
-              />
-              <input
-                class="operator2"
-                type="button"
-                value="="
-                onclick="calculate()"
-              />
-            </div>
-          </form>
-          <div class="swipe"></div>
+  <body>
+    <div class="calculator">
+      <div class="whiteBorder">
+        <header>
+          <div class="header-content">
+            <span><i class="bi bi-reception-4"></i></span>
+            <span><i class="bi bi-wifi"></i></span>
+            <span><i class="bi bi-battery-full"></i></span>
+          </div>
+        </header>
+        <div class="Display">
+          <span id="calculate" class="calculate"></span>
+          <span id="result" class="result"></span>
         </div>
+        <div class="buttons">
+          <div class="container1">
+            <button class="operator2" onclick="clearDisplay()">C</button>
+            <button class="operator2" onclick="toggleSign()">+/-</button>
+            <button class="operator2" onclick="appendToDisplay('%')">%</button>
+            <button class="operator1" onclick="appendToDisplay('/')">÷</button>
+          </div>
+          <div class="container2">
+            <button class="figure" onclick="appendToDisplay('7')">7</button>
+            <button class="figure" onclick="appendToDisplay('8')">8</button>
+            <button class="figure" onclick="appendToDisplay('9')">9</button>
+            <button class="operator1" onclick="appendToDisplay('*')">x</button>
+          </div>
+          <div class="container3">
+            <button class="figure" onclick="appendToDisplay('4')">4</button>
+            <button class="figure" onclick="appendToDisplay('5')">5</button>
+            <button class="figure" onclick="appendToDisplay('6')">6</button>
+            <button class="operator1" onclick="appendToDisplay('-')">-</button>
+          </div>
+          <div class="container4">
+            <button class="figure" onclick="appendToDisplay('1')">1</button>
+            <button class="figure" onclick="appendToDisplay('2')">2</button>
+            <button class="figure" onclick="appendToDisplay('3')">3</button>
+            <button class="operator1" onclick="appendToDisplay('+')">+</button>
+          </div>
+          <div class="zeroBtnDiv">
+            <button class="zeroBtn figure" onclick="appendToDisplay('0')">
+              0
+            </button>
+            <button class="figure" onclick="appendToDisplay('.')">.</button>
+            <button class="operator1" onclick="calculate()">=</button>
+          </div>
+        </div>
+        <div class="swipe"></div>
       </div>
     </div>
 

@@ -1,17 +1,15 @@
-const display = document.getElementById("display");
+const display = document.getElementById("calculate");
 const result = document.getElementById("result");
 
 function appendToDisplay(input) {
   display.innerText += input;
 }
-
 function toggleSign() {
-  if (display.innerText.startsWith === "-") {
-    display.innerText = "+";
+  if (display.innerText.startsWith("-")) {
+    display.innerText = display.innerText.substring(1);
   } else if (display.innerText !== "") {
-    display = "-" + display.innerText;
+    display.innerText = "-" + display.innerText;
   }
-  updateDisplay();
 }
 function clearDisplay() {
   display.innerText = "";
